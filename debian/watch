@@ -1,0 +1,3 @@
+version=3
+opts="filenamemangle=s/(?:.*\/)?v?(\d[\d\.]*)\.tar\.gz/git-remote-bzr-$1.tar.gz/" \
+ https://github.com/felipec/git-remote-bzr/tags (?:.*/)?v?(\d[\d\.]*)\.tar\.gz

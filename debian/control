@@ -1,0 +1,33 @@
+Source: git-remote-bzr
+Section: vcs
+Priority: extra
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: asciidoc, xmlto,
+# Needed for the testsuite
+ bzr, git, python, python-bzrlib
+Standards-Version: 3.9.5
+Homepage: https://github.com/felipec/git-remote-bzr
+#Vcs-Git: git://git.debian.org/collab-maint/git-remote-bzr.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/git-remote-bzr.git;a=summary
+
+Package: git-remote-bzr
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, git, python, python-bzrlib
+Suggests: git-doc, bzr
+Conflicts: bzr-git
+Breaks: git-bzr (<< 2:${source:Version})
+Replaces: git-bzr
+Description: bidirectional bridge between Git and Bazaar
+ This package provides the bzr remote helper, which allows Git to
+ read from and write to Bazaar repositories as though they were remote
+ Git repositories.
+
+Package: git-bzr
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, git-remote-bzr, 
+Description: transitional package
+ Transitional package to install git-remote-bzr.
+

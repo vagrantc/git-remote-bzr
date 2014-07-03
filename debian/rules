@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+override_dh_auto_build:
+	dh_auto_build -- doc
+
+override_dh_auto_install:
+	dh_auto_install -- prefix=/usr DESTDIR=debian/git-remote-bzr install-doc
+
+override_dh_gencontrol:
+	dh_gencontrol
+	sed -i -e 's,^Version: ,Version: 2:,' debian/git-bzr/DEBIAN/control
+
+%:
+	dh $@ 

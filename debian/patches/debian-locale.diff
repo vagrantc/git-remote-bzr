@@ -1,0 +1,38 @@
+Description: Use C.UTF-8 locale in tests rather than en_US.UTF-8
+ The en_US.UTF-8 locale is not guaranteed to exist, and if it doesn't,
+ several tests fail.
+Author: Sven Joachim <svenjoac@gmx.de>
+Forwarded: no
+Last-Update: 2014-07-02
+
+Index: git-remote-bzr/test/main.t
+===================================================================
+--- git-remote-bzr.orig/test/main.t
++++ git-remote-bzr/test/main.t
+@@ -212,7 +212,7 @@ rm -rf bzrrepo gitrepo
+ test_expect_success 'fetch utf-8 filenames' '
+ 	test_when_finished "rm -rf bzrrepo gitrepo && LC_ALL=C" &&
+ 
+-	LC_ALL=en_US.UTF-8 &&
++	LC_ALL=C.UTF-8 &&
+ 	export LC_ALL &&
+ 
+ 	(
+@@ -245,7 +245,7 @@ test_expect_success 'push utf-8 filename
+ 
+ 	mkdir -p tmp && cd tmp &&
+ 
+-	LC_ALL=en_US.UTF-8 &&
++	LC_ALL=C.UTF-8 &&
+ 	export LC_ALL &&
+ 
+ 	(
+@@ -384,7 +384,7 @@ test_expect_success 'strip' '
+ test_expect_success 'export utf-8 authors' '
+ 	test_when_finished "rm -rf bzrrepo gitrepo && LC_ALL=C && GIT_COMMITTER_NAME=\"C O Mitter\"" &&
+ 
+-	LC_ALL=en_US.UTF-8 &&
++	LC_ALL=C.UTF-8 &&
+ 	export LC_ALL &&
+ 
+ 	GIT_COMMITTER_NAME="Grégoire" &&

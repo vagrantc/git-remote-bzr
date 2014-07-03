@@ -1,0 +1,16 @@
+Description: Change shebang line to /usr/bin/python
+ Using /usr/bin/env is unnecessary since we know where the python
+ interpreter is, and older versions of the python package did not
+ provide /usr/bin/python2.
+Author: Sven Joachim <svenjoac@gmx.de>
+Forwarded: not-needed
+Last-Update: 2014-05-23
+
+--- git-remote-bzr-0.2.orig/git-remote-bzr
++++ git-remote-bzr-0.2/git-remote-bzr
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python2
++#!/usr/bin/python
+ #
+ # Copyright (c) 2012 Felipe Contreras
+ #
