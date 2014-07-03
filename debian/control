@@ -29,6 +29,7 @@ Package: git-bzr
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}, git-remote-bzr, 
-Description: transitional package
- Transitional package to install git-remote-bzr.
-
+Description: transitional dummy package
+ This is a transitional dummy package to ease the migration
+ from the git-bzr to the new git-remote-bzr package.
+ You can remove it safely.
