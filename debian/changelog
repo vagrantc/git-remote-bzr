@@ -1,12 +1,6 @@
-git-remote-bzr (0.2+20140702~1-1) UNRELEASED; urgency=low
+git-remote-bzr (0.2+20140705-1) unstable; urgency=low
 
-  [ Sven Joachim ]
   * Initial release (Closes: #702697).
+  * Thanks to Sven Joachim for initial packaging work!
 
-  [ Vagrant Cascadian ]
-  * Upstream version from git snapshot.
-  * Refreshed locale patch. 
-  * Add git-bzr transitional package.
-  * Updated debian/copyright. 
-
- -- Vagrant Cascadian <vagrant@debian.org>  Wed, 02 Jul 2014 19:54:42 -0700
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 05 Jul 2014 10:33:58 -0700
