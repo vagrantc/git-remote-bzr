@@ -1,11 +1,13 @@
 #!/usr/bin/make -f
 
+version := $(shell dpkg-parsechangelog | sed -n 's/^Version: //p')
+
 override_dh_auto_install:
 	dh_auto_install -- prefix=/usr DESTDIR=debian/git-remote-bzr install-doc
 
 override_dh_gencontrol:
-	dh_gencontrol
-	sed -i -e 's,^Version: ,Version: 2:,' debian/git-bzr/DEBIAN/control
+	dh_gencontrol -Ngit-bzr
+	dh_gencontrol -pgit-bzr -- -v2:$(version)
 
 %:
 	dh $@ 
