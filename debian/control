@@ -18,7 +18,7 @@ Multi-Arch: foreign
 Depends: ${misc:Depends}, git, python, python-bzrlib
 Suggests: git-doc, bzr
 Conflicts: bzr-git
-Breaks: git-bzr (<< 2:${source:Version})
+Breaks: git-bzr (<< 2:0.2+20140700)
 Replaces: git-bzr
 Description: bidirectional bridge between Git and Bazaar
  This package provides the bzr remote helper, which allows Git to
