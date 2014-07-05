@@ -6,8 +6,8 @@ override_dh_auto_install:
 	dh_auto_install -- prefix=/usr DESTDIR=debian/git-remote-bzr install-doc
 
 override_dh_gencontrol:
-	dh_gencontrol -Ngit-bzr
-	dh_gencontrol -pgit-bzr -- -v2:$(version)
+	dh_gencontrol --no-package=git-bzr
+	dh_gencontrol --package=git-bzr -- -v2:$(version)
 
 %:
 	dh $@ 
