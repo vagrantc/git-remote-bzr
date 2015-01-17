@@ -1,3 +1,10 @@
+git-remote-bzr (0.2+20140705-2) unstable; urgency=medium
+
+  * git-remote-bzr postinst: Remove obsolete alternatives no longer
+    provided by the git-bzr package (Closes: #773196).
+
+ -- Vagrant Cascadian <vagrant@debian.org>  Sat, 17 Jan 2015 15:03:58 -0800
+
 git-remote-bzr (0.2+20140705-1) unstable; urgency=low
 
   * Initial release (Closes: #702697).
